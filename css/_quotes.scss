@@ -12,8 +12,13 @@
             content: url('../images/bg-quotes.png');
             position: absolute;
             top: -40px;
-            left: -25px;
-            z-index: 1;
+            left: 0;
+
+
+            @include breakpoint(large) {
+                top: -40px;
+                left: -25px;
+            }
         }
 
         @include breakpoint(large) {

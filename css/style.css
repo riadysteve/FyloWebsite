@@ -1,19 +1,20 @@
 html {
   font-size: 100%;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after,
 html {
-  box-sizing: border-box;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  padding: 0;
   line-height: 1.6;
   font-family: "Open Sans", sans-serif;
 }
@@ -59,22 +60,34 @@ p {
 }
 
 section {
-  padding-bottom: 70px;
+  padding-bottom: 140px;
   background-color: #181f2a;
 }
 @media (min-width: 899px) {
   section {
-    padding-bottom: 140px;
+    padding-bottom: 240px;
   }
 }
 
 .btn-primary {
   background: linear-gradient(to right, #65e2d9, #339ecc);
   border-radius: 30px;
-  padding: 15px 85px;
-  margin-top: 10px;
+  padding: 15px 40px;
+  color: #fff;
+  cursor: pointer;
   font-weight: 700;
-  margin-bottom: 100px;
+  transition: all 0.5s ease;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+input[type=text],
+input[type=submit] {
+  border: none;
+  outline: none;
+  padding: 15px 30px;
+  border-radius: 30px;
 }
 
 header {
@@ -148,6 +161,7 @@ header nav img {
 .hero .flex-container a,
 .hero .flex-container img {
   z-index: 1;
+  margin-bottom: 20px;
 }
 .hero .flex-container img.illustration {
   width: 100%;
@@ -256,8 +270,13 @@ header nav img {
   content: url("../images/bg-quotes.png");
   position: absolute;
   top: -40px;
-  left: -25px;
-  z-index: 1;
+  left: 0;
+}
+@media (min-width: 999px) {
+  .quotes__grid::before {
+    top: -40px;
+    left: -25px;
+  }
 }
 @media (min-width: 999px) {
   .quotes__grid {
@@ -291,6 +310,34 @@ header nav img {
 .quotes .quote__clients div p:first-child {
   font-weight: 700;
   color: #fff;
+}
+
+.getstarted .box {
+  background-color: #1b2330;
+  text-align: center;
+  border-radius: 8px;
+  padding: 45px;
+  margin: auto;
+}
+@media (min-width: 999px) {
+  .getstarted .box {
+    width: 60%;
+  }
+}
+.getstarted .box h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.getstarted .box .subscribe {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+@media (min-width: 999px) {
+  .getstarted .box .subscribe {
+    grid-template-columns: 1fr 200px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
