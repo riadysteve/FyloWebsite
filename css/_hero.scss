@@ -1,0 +1,48 @@
+.hero {
+    background-color: $introBlue;
+    position: relative;
+
+    img.curvy {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1,
+        p,
+        a,
+        img {
+            z-index: 1;
+        }
+
+        img.illustration {
+            width: 100%;
+
+            @include breakpoint(large) {
+                width: 50%;
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+            max-width: 678px;
+        }
+
+        p {
+            max-width: 80%;
+            color: #ddd;
+
+            @include breakpoint(large) {
+                max-width: 40%;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+header {
+    background-color: $introBlue;
+    position: relative;
+
+    .curvy {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 120px;
+
+        background-image: url('../images/bg-curvy-mobile.svg');
+        background-position: bottom center;
+        background-size: cover;
+
+        @include breakpoint(medium) {
+            background-image: url('../images/bg-curvy-desktop.svg');
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0 50px 0;
+
+
+        @include breakpoint(large) {
+            padding: 50px 80px;
+        }
+
+        a {
+            margin-right: 30px;
+
+            @include breakpoint(large) {
+                margin-right: 20px;
+            }
+        }
+
+        a:last-child {
+            margin-right: 0;
+
+        }
+
+        img {
+            width: 100px;
+
+            @include breakpoint(large) {
+                width: 180px;
+            }
+        }
+    }
+}
