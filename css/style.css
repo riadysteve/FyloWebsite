@@ -1,15 +1,5 @@
 html {
   font-size: 100%;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after,
-html {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -17,6 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 a,
@@ -337,6 +330,81 @@ header nav img {
 @media (min-width: 999px) {
   .getstarted .box .subscribe {
     grid-template-columns: 1fr 200px;
+  }
+}
+
+footer {
+  background-color: #1b2330;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 80px;
+}
+footer .logo {
+  margin-bottom: 20px;
+}
+footer .footer__nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 999px) {
+  footer .footer__nav {
+    grid-template-columns: repeat(2, 2fr) repeat(3, 1fr);
+  }
+}
+footer .footer__nav__location {
+  display: flex;
+}
+footer .footer__nav__location svg {
+  flex: 0 0 20px;
+  margin-top: 3px;
+  margin-right: 20px;
+}
+footer .footer__nav__location p {
+  line-height: 1.8;
+}
+footer .footer__nav__contact {
+  justify-self: flex-start;
+}
+@media (min-width: 999px) {
+  footer .footer__nav__contact {
+    justify-self: center;
+  }
+}
+footer .footer__nav__contact .phone,
+footer .footer__nav__contact .email {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+footer .footer__nav__contact .phone svg,
+footer .footer__nav__contact .email svg {
+  margin-right: 20px;
+}
+footer .footer__nav__contact .phone p,
+footer .footer__nav__contact .email p {
+  margin: 0;
+}
+footer .footer__nav__links-1 li, footer .footer__nav__links-2 li {
+  margin-bottom: 20px;
+}
+footer .footer__nav__social-media {
+  justify-self: center;
+}
+footer .footer__nav__social-media a {
+  margin-right: 10px;
+}
+footer .footer__nav__social-media a svg {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 8px;
+}
+footer .footer__nav__social-media a:last-child {
+  margin-right: 0;
+}
+@media (min-width: 999px) {
+  footer .footer__nav__social-media {
+    justify-self: flex-end;
   }
 }
 
