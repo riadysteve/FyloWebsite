@@ -38,7 +38,6 @@
 
         p {
             max-width: 80%;
-            color: #ddd;
 
             @include breakpoint(large) {
                 max-width: 40%;

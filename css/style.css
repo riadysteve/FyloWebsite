@@ -23,6 +23,11 @@ body {
   color: #fff;
 }
 
+a,
+p {
+  font-size: 0.9rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -40,6 +45,7 @@ h3 {
 p {
   margin-top: 0;
   margin-bottom: 1.5em;
+  color: #ddd;
 }
 
 .container {
@@ -157,7 +163,6 @@ header nav img {
 }
 .hero .flex-container p {
   max-width: 80%;
-  color: #ddd;
 }
 @media (min-width: 999px) {
   .hero .flex-container p {
@@ -217,12 +222,75 @@ header nav img {
   text-align: left;
 }
 .productive__text h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 @media (min-width: 999px) {
   .productive__text h2 {
     width: 70%;
   }
+}
+.productive__text a {
+  background-image: url("../images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 25px;
+  padding-bottom: 5px;
+  color: #65e2d9;
+  border-bottom: 1px solid #65e2d9;
+  transition: all 1s ease-in-out;
+}
+.productive__text a:hover {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.quotes__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+}
+.quotes__grid::before {
+  content: url("../images/bg-quotes.png");
+  position: absolute;
+  top: -40px;
+  left: -25px;
+  z-index: 1;
+}
+@media (min-width: 999px) {
+  .quotes__grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+  }
+}
+.quotes .quote {
+  background-color: #1b2330;
+  padding: 25px 15px;
+  z-index: 1;
+}
+.quotes .quote__clients {
+  display: flex;
+  align-items: center;
+}
+.quotes .quote__clients img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+.quotes .quote__clients div {
+  display: flex;
+  flex-direction: column;
+}
+.quotes .quote__clients div p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+.quotes .quote__clients div p:first-child {
+  font-weight: 700;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

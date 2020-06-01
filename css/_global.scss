@@ -23,6 +23,11 @@ body {
     color: #fff;
 }
 
+a,
+p {
+    font-size: 0.9rem;
+}
+
 a {
     text-decoration: none;
 }
@@ -40,6 +45,7 @@ h3 {
 p {
     margin-top: 0;
     margin-bottom: 1.5em;
+    color: #ddd;
 }
 
 .container {

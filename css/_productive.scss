@@ -24,12 +24,27 @@
         text-align: left;
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 2rem;
 
             @include breakpoint(large) {
                 width: 70%;
             }
+        }
 
+        a {
+            background-image: url('../images/icon-arrow.svg');
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 25px;
+            padding-bottom: 5px;
+            color: $ctaCyan;
+            border-bottom: 1px solid $ctaCyan;
+            transition: all 1s ease-in-out;
+
+            &:hover {
+                border-bottom: 1px solid #fff;
+                color: #fff;
+            }
         }
     }
 }
